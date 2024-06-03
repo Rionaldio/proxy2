@@ -79,7 +79,7 @@ async def connect_to_wss(socks5_proxy, user_id, retry_count=3):
                 break
 
 async def main():
-    _user_id = input('Please Enter your user ID: ')
+    _user_id = "2ezqmh8l9CKobr0C6SDweovDN4"
     proxy_list_url = "https://raw.githubusercontent.com/Rionaldio/proxy2/main/socks5.txt"
     r = requests.get(proxy_list_url, stream=True)
     if r.status_code == 200:
