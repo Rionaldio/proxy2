@@ -94,7 +94,7 @@ async def main():
 
     tasks = []
     for proxy in socks5_proxy_list:
-        proxy_ip, proxy_port = proxy.split('@')[-1].split(':')
+        proxy_ip, proxy_port = proxy.split(':')
         logger.info(f"Connecting to {proxy_ip}:{proxy_port}...")
         tasks.append(asyncio.ensure_future(connect_to_wss(f"socks5://{proxy}", _user_id)))
 
